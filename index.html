@@ -41,6 +41,15 @@
   .cover .meta .k{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.16em; margin-bottom:6px;}
   .cover .meta .v{ font-family:'Archivo','Heebo',sans-serif; font-weight:700; font-size:18px;}
 
+  /* Executive Summary */
+  .exec-sum{ padding:56px 0; border-bottom:1px solid var(--rule); }
+  .exec-label{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--purple); text-transform:uppercase; letter-spacing:.18em; margin-bottom:32px; }
+  .exec-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .exec-item{ display:flex; gap:20px; padding:24px; border:1px solid var(--rule); }
+  .exec-item .n{ font-family:'Archivo Black'; font-size:36px; color:var(--purple); line-height:1; flex-shrink:0; padding-top:2px; }
+  .exec-item .t{ font-family:'Archivo','Heebo'; font-weight:700; font-size:17px; line-height:1.3; margin-bottom:8px; }
+  .exec-item p{ font-size:14px; color:var(--muted); line-height:1.6; margin:0; }
+
   section.chapter{ padding:72px 0 24px; border-top:1px solid var(--rule); }
   section.chapter:first-of-type{ border-top:none;}
   .chap-head{ display:flex; align-items:baseline; gap:18px; margin-bottom:28px;}
@@ -90,10 +99,15 @@
   .mover .to{ font-family:'Archivo Black'; font-size:54px; color:var(--purple); line-height:1;}
   .mover p{ font-size:14px; color:var(--muted); margin-top:14px; line-height:1.5;}
 
-  .ai-list{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:20px 0;}
-  .ai-row{ display:flex; justify-content:space-between; align-items:center; padding:14px 18px; border:1px solid var(--rule); }
-  .ai-row .kw{ font-family:'Archivo','Heebo'; font-weight:600; font-size:15px;}
-  .ai-row .dot{ color:var(--purple); font-size:22px;}
+  /* AI Section - highlighted */
+  .ai-hero{ background:var(--ink); color:var(--paper); padding:32px; margin:24px 0; }
+  .ai-hero .ai-title{ font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--lilac); margin-bottom:12px; }
+  .ai-hero .ai-head{ font-family:'Archivo Black'; font-size:28px; line-height:1.1; letter-spacing:-.02em; margin-bottom:16px; }
+  .ai-hero .ai-sub{ font-size:15px; color:rgba(245,242,236,.7); line-height:1.6; margin-bottom:24px; max-width:600px; }
+  .ai-list{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:0;}
+  .ai-row{ display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:rgba(255,255,255,.06); }
+  .ai-row .kw{ font-family:'Archivo','Heebo'; font-weight:600; font-size:14px; color:var(--paper);}
+  .ai-row .dot{ color:var(--lilac); font-size:18px;}
 
   .vol-list{ margin:20px 0;}
   .vol-row{ display:grid; grid-template-columns:280px 1fr 80px; gap:16px; align-items:center; padding:8px 0; border-bottom:1px solid var(--hairline); font-size:14px; }
@@ -108,10 +122,16 @@
   .plan-item .t{ font-family:'Archivo','Heebo'; font-weight:700; font-size:20px; margin-top:6px; line-height:1.3;}
   .plan-item p{ margin-top:8px; font-size:14px; color:var(--muted); line-height:1.5;}
 
-  .asks{ display:grid; gap:24px; margin:24px 0;}
-  .ask .n{ font-family:'Archivo Black'; font-size:44px; color:var(--purple); line-height:1;}
-  .ask .t{ font-family:'Archivo','Heebo'; font-weight:700; font-size:20px; margin-top:14px; line-height:1.3;}
-  .ask p{ font-size:14px; color:var(--muted); margin-top:8px; line-height:1.55;}
+  /* CTA Partner Block */
+  .cta-partner{ border:2px solid var(--purple); padding:36px 40px; margin:24px 0; }
+  .cta-partner .cta-label{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--purple); text-transform:uppercase; letter-spacing:.18em; margin-bottom:12px; }
+  .cta-partner .cta-head{ font-family:'Archivo Black'; font-size:32px; line-height:1.1; letter-spacing:-.02em; margin-bottom:8px; }
+  .cta-partner .cta-sub{ font-size:16px; color:var(--muted); line-height:1.6; margin-bottom:28px; }
+  .cta-asks{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .cta-ask{ border-top:2px solid var(--rule); padding-top:20px; }
+  .cta-ask .n{ font-family:'Archivo Black'; font-size:40px; color:var(--purple); line-height:1; }
+  .cta-ask .t{ font-family:'Archivo','Heebo'; font-weight:700; font-size:18px; margin-top:12px; line-height:1.3; }
+  .cta-ask p{ font-size:14px; color:var(--muted); margin-top:8px; line-height:1.55; }
 
   footer.doc-foot{ margin-top:64px; padding-top:32px; border-top:1px solid var(--rule); display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
   footer.doc-foot .lockup{ display:flex; align-items:center; gap:18px; font-family:'Archivo Black'; font-size:32px; letter-spacing:-.04em; direction:ltr; justify-content:flex-end; }
@@ -134,7 +154,25 @@
   .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start;}
   .source{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); letter-spacing:.14em; text-transform:uppercase; margin-top:8px; }
 
-  @media print{ body{ background:#fff;} .doc{ padding:24px;} }
+  .pdf-btn{
+    position:fixed; bottom:32px; left:32px; z-index:100;
+    display:flex; align-items:center; gap:10px;
+    background:var(--purple); color:var(--paper);
+    font-family:'JetBrains Mono', monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase;
+    padding:14px 24px; border:none; cursor:pointer;
+    box-shadow:0 4px 24px rgba(75,43,224,.35);
+    transition:opacity .15s;
+  }
+  .pdf-btn:hover{ opacity:.88; }
+  .pdf-btn svg{ width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
+
+  @media print{
+    body{ background:#fff;}
+    .doc{ padding:24px;}
+    .pdf-btn{ display:none !important;}
+    section.chapter{ page-break-inside:avoid;}
+    .exec-sum, .ai-hero, .cta-partner{ page-break-inside:avoid;}
+  }
 </style>
 </head>
 <body>
@@ -164,12 +202,63 @@
     <div class="toc">
       <div class="h">תוכן הדוח</div>
       <ol>
+        <li><span class="n">00</span><span class="t">תקציר מנהלים · Bottom Line</span></li>
         <li><span class="n">01</span><span class="t">הקשר · רקע תחרותי</span></li>
         <li><span class="n">02</span><span class="t">ביצועים · Analytics ונוכחות AI</span></li>
         <li><span class="n">03</span><span class="t">מיקומים · מילות מפתח</span></li>
         <li><span class="n">04</span><span class="t">תוכן · אפריל ומאי</span></li>
         <li><span class="n">05</span><span class="t">מה הלאה · תוכנית ובקשות</span></li>
       </ol>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════
+       00 · תקציר מנהלים
+  ══════════════════════════ -->
+  <div class="exec-sum">
+    <div class="exec-label">00 · תקציר מנהלים · Bottom Line</div>
+    <div class="exec-grid">
+      <div class="exec-item">
+        <div class="n">01</div>
+        <div>
+          <div class="t">3 מונחי ליבה הגיעו למקום 1 בגוגל החודש</div>
+          <p>
+            <b>cargo risk management platform</b>, <b>24/7/365 Escalation Center</b>
+            ו-<b>Economics of Supply Chain Visibility</b> עלו למקום הראשון.
+            כשלקוח פוטנציאלי מחפש פתרון, הוא פוגש את Contguard ראשון.
+          </p>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="n">02</div>
+        <div>
+          <div class="t">Contguard מצוטטת ב-ChatGPT, Perplexity, Gemini ו-Google AI</div>
+          <p>
+            רוב המתחרים עדיין לא שם. נוכחות ב-AI היא ערוץ שגדל בקצב מהיר,
+            ואנחנו כבר בפנים לפני שהתחרות התחילה לשחק.
+          </p>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="n">03</div>
+        <div>
+          <div class="t">775 ביקורים אורגניים = שווי מדיה ~$7,500</div>
+          <p>
+            הביטויים שדורגנו בהם עולים $8-15 לקליק בגוגל Ads. אותה תנועה
+            בפרסום ממומן הייתה עולה $7,500-$11,000. SEO מביא אותה בחינם.
+          </p>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="n">04</div>
+        <div>
+          <div class="t">כדי לצמוח ב-20%: 4-5 מאמרים ואישור מהיר</div>
+          <p>
+            הנוסחה ברורה. כל מאמר שנפרסם היום מגיע לגוגל תוך 4-8 שבועות.
+            מהירות האישור היא הגורם הקריטי היחיד שתלוי בצד שלכם.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -238,7 +327,7 @@
       לעמוד הראשון, וכניסה לתוצאות של מנועי תשובות מבוססי AI.
     </p>
 
-    <div class="kpis" style="grid-template-columns:repeat(3,1fr);">
+    <div class="kpis" style="grid-template-columns:repeat(4,1fr);">
       <div class="kpi">
         <div class="k">משתמשים · GA</div>
         <div class="v ltr">775</div>
@@ -250,9 +339,14 @@
         <div class="d">כולל מונחי ליבה</div>
       </div>
       <div class="kpi">
+        <div class="k">שווי מדיה מוערך</div>
+        <div class="v" style="font-size:34px;"><span class="u">$</span>7.5K</div>
+        <div class="d">מול CPC של $8-15 בממומן</div>
+      </div>
+      <div class="kpi">
         <div class="k">נוכחות AI</div>
         <div class="v">4<span class="u">/4</span></div>
-        <div class="d">ChatGPT · Perplexity · Gemini · AI Overviews</div>
+        <div class="d">ChatGPT · Perplexity · Gemini · Overviews</div>
       </div>
     </div>
 
@@ -261,6 +355,9 @@
       <h3 class="sub">Google Analytics · משתמשים</h3>
       <p>
         פילוח חודשי של משתמשים, משתמשים חדשים ודפים-לסשן לאורך חודשי הקידום.
+        <b>454 מתוך 775 הביקורים</b> היו משתמשים שלא ביקרו באתר לפני כן, כלומר
+        Contguard פגשה אנשים חדשים שמצאו את האתר דרך חיפוש תעשייתי ב-Google,
+        לא דרך חיפוש ישיר של שם החברה.
       </p>
 
       <table class="report">
@@ -354,19 +451,21 @@
 
     <!-- נוכחות AI -->
     <div class="sub-section">
-      <h3 class="sub">נוכחות במנועי AI</h3>
-      <p>
-        ארבעת מונחי הליבה שנבדקו מופיעים כתוצאה במנועי תשובות מבוססי AI.
-        הקידום האורגני של 2026 כולל גם להיות מצוטט במקום שבו המשתמשים שואלים.
-      </p>
-
-      <div class="ai-list">
-        <div class="ai-row"><span class="kw ltr">cargo risk management platform</span><span class="dot">●</span></div>
-        <div class="ai-row"><span class="kw ltr">24/7/365 Escalation Center</span><span class="dot">●</span></div>
-        <div class="ai-row"><span class="kw ltr">The Economics of Supply Chain Visibility</span><span class="dot">●</span></div>
-        <div class="ai-row"><span class="kw ltr">supply chain visibility example</span><span class="dot">●</span></div>
+      <div class="ai-hero">
+        <div class="ai-title">נוכחות ב-AI · Generative Engine Optimization</div>
+        <div class="ai-head">Contguard מצוטטת בכל 4 מנועי ה-AI המובילים.</div>
+        <div class="ai-sub">
+          בשנת 2026, חלק גדל מהלקוחות מתחיל חיפוש ב-ChatGPT או Perplexity, לא ב-Google.
+          Contguard כבר שם. רוב המתחרים עדיין לא. זה יתרון שקשה לבנות בלחיצת כפתור.
+        </div>
+        <div class="ai-list">
+          <div class="ai-row"><span class="kw ltr">cargo risk management platform</span><span class="dot">●</span></div>
+          <div class="ai-row"><span class="kw ltr">24/7/365 Escalation Center</span><span class="dot">●</span></div>
+          <div class="ai-row"><span class="kw ltr">The Economics of Supply Chain Visibility</span><span class="dot">●</span></div>
+          <div class="ai-row"><span class="kw ltr">supply chain visibility example</span><span class="dot">●</span></div>
+        </div>
       </div>
-      <div class="source">נבדק ב: ChatGPT · Perplexity · Gemini · Google AI Overviews</div>
+      <div class="source">נבדק ב: ChatGPT · Perplexity · Gemini · Google AI Overviews · מאי 2026</div>
     </div>
   </section>
 
@@ -609,52 +708,52 @@
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">01</td>
             <td class="kw ltr">Securing Global EV Battery Logistics against Thermal Runaway and Container Delays</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">EV battery supply chain visibility · lithium-ion ocean transport · thermal runaway prevention logistics · container-level IoT tracking</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">EV battery supply chain visibility · lithium-ion ocean transport · thermal runaway prevention logistics</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">02</td>
             <td class="kw ltr">Bulk Chemical and Hazardous Material Ocean Transit Compliance</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">hazmat supply chain visibility · chemical container tracking · bulk liquid logistics security · hazardous material transit compliance</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">hazmat supply chain visibility · chemical container tracking · bulk liquid logistics security</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">03</td>
             <td class="kw ltr">Preventing High-Value Theft in Ocean Freight for Luxury Goods</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">luxury supply chain security · preventing shipping container theft · high-value cargo tracking · global port security IoT</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">luxury supply chain security · preventing shipping container theft · high-value cargo tracking</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">04</td>
             <td class="kw ltr">Securing Bulk Pharmaceutical Pallets During Global Port Congestion</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">bulk pharma cold chain · pallet-level temperature monitoring · pharmaceutical ocean freight · port congestion pharma logistics</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">bulk pharma cold chain · pallet-level temperature monitoring · port congestion pharma logistics</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">05</td>
             <td class="kw ltr">Eliminating Spoilage in International Agricultural Reefer Containers</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">global reefer tracking · agricultural supply chain visibility · preventing food spoilage in transit · continuous cold chain monitoring</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">global reefer tracking · agricultural supply chain visibility · preventing food spoilage in transit</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">06</td>
             <td class="kw ltr">Monitoring Shock and Tilt for High-Tech Manufacturing Equipment</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">heavy machinery logistics · semiconductor equipment transport · shock and tilt IoT sensors · high-tech supply chain visibility</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">heavy machinery logistics · semiconductor equipment transport · shock and tilt IoT sensors</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">07</td>
             <td class="kw ltr">Aerospace Component Logistics and Preventing Assembly Line Halts</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">aerospace supply chain visibility · jet engine transport security · multi-modal aerospace logistics · manufacturing continuity tracking</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">aerospace supply chain visibility · jet engine transport security · manufacturing continuity tracking</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">08</td>
             <td class="kw ltr">Tracking Precious Metals and Critical Raw Materials Across Borders</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">raw material supply chain · critical minerals logistics · preventing ore theft · global mining supply chain visibility</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">raw material supply chain · critical minerals logistics · global mining supply chain visibility</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">09</td>
             <td class="kw ltr">Utilizing Supply Chain IoT for Scope 3 Emission Reporting and ESG Compliance</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">Scope 3 emissions logistics · sustainable supply chain visibility · IoT carbon footprint tracking · ESG logistics compliance</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">Scope 3 emissions logistics · sustainable supply chain visibility · ESG logistics compliance</td>
           </tr>
           <tr>
             <td class="num" style="color:var(--purple); font-weight:700;">10</td>
             <td class="kw ltr">Securing the Multi-Modal Transport of Renewable Energy Infrastructure</td>
-            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">renewable energy supply chain · wind turbine logistics · solar panel transport security · heavy infrastructure tracking</td>
+            <td style="font-size:13px; color:var(--muted); font-family:'JetBrains Mono',monospace;" class="ltr">renewable energy supply chain · wind turbine logistics · heavy infrastructure tracking</td>
           </tr>
         </tbody>
       </table>
@@ -671,7 +770,7 @@
     </div>
 
     <p class="lede-block">
-      ארבעה צירי עבודה לחודש הקרוב, ושתי בקשות שיעזרו לנו להתקדם בקצב הנכון.
+      ארבעה צירי עבודה לחודש הקרוב.
     </p>
 
     <div class="plan">
@@ -697,21 +796,34 @@
       </div>
     </div>
 
-    <!-- בקשות -->
+    <!-- CTA Partner Block -->
     <div class="sub-section">
-      <h3 class="sub">בקשות</h3>
-      <p>שתי בקשות שיעזרו לנו להתקדם בקצב הנכון בחודש הקרוב.</p>
-
-      <div class="asks" style="grid-template-columns:repeat(2,1fr);">
-        <div class="ask">
-          <div class="n">01</div>
-          <div class="t">אישור על קצב התוכן</div>
-          <p>4-5 מאמרים בחודש זו ההחלטה היחידה שתשפיע ישירות על המיקומים בחודש הבא. צריך אישור.</p>
+      <div class="cta-partner">
+        <div class="cta-label">שותפות · הצעד הבא</div>
+        <div class="cta-head">מה אני צריך ממך כדי שנגדל ב-20% בחודש הבא.</div>
+        <div class="cta-sub">
+          הנוסחה ברורה. אני מביא את האסטרטגיה, הכתיבה והטכניקה. מה שמאיץ או מעכב
+          את הצמיחה הוא מה שקורה בצד שלכם. שני דברים בלבד.
         </div>
-        <div class="ask">
-          <div class="n">02</div>
-          <div class="t">איש תוכן חדש לעבודה משותפת</div>
-          <p>הצטרף איש תוכן חדש לצוות. נשמח להגדיר ביחד תהליך עבודה ברור שיאיץ את אישור התכנים.</p>
+        <div class="cta-asks">
+          <div class="cta-ask">
+            <div class="n">01</div>
+            <div class="t">4-5 מאמרים בחודש, בלי יוצא מן הכלל</div>
+            <p>
+              זו ההחלטה האחת שתשפיע ישירות על המיקומים בחודש הבא.
+              כל מאמר שעולה היום מגיע לגוגל תוך 4-8 שבועות. עצירה של חודש אחד
+              מאיטה את הצמיחה בשלושה חודשים.
+            </p>
+          </div>
+          <div class="cta-ask">
+            <div class="n">02</div>
+            <div class="t">אישור תכנים תוך 24-48 שעות</div>
+            <p>
+              הצטרף איש תוכן חדש לצוות. נשמח להגדיר ביחד תהליך עבודה ברור.
+              ככל שהאישור מהיר יותר, כך הפרסום מהיר יותר, והתוצאות מגיעות מוקדם יותר.
+              אתם קובעים את קצב הצמיחה.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -739,5 +851,11 @@
   </footer>
 
 </div>
+
+<button class="pdf-btn" onclick="window.print()">
+  <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><rect x="6" y="17" width="12" height="5"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>
+  הורד PDF
+</button>
+
 </body>
 </html>
